@@ -24,4 +24,4 @@ print(Rating)
 # Making DataFrame
 df = pd.DataFrame({'Title':title,'Price':Price,'Rating':Rating})
 
-df.to_csv('Books')
+df.to_csv('Books.csv',index=False)
