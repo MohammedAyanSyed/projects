@@ -9,7 +9,7 @@ This directory contains beginner-friendly SQL projects built using:
 
 - SQL Queries (Joins, Aggregations)
 
-📘 Project List
+## 📘 Project List
 
 - **Smart Grocery Inventory**
 
