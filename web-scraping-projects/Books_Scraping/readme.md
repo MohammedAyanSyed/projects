@@ -1,8 +1,8 @@
 # 📚 BOOKS SCRAPING
 This project scrapes book data from [Books to Scrape](http://books.toscrape.com/), 
-a practice website designed for learning web scraping
+a practice website designed for learning web scraping.
 ## 📝 Introduction
-* A collection of Python scripts for scraping and extracting data from website
+* A collection of Python scripts for scraping and extracting data from websites.
 * It uses Python along with Requests for fetching HTML pages and BeautifulSoup for parsing and extracting information.
 
 ## 🧱 Folder Structure
@@ -20,8 +20,8 @@ Books_Scraping/
 * Pandas 🐼
 
 ## ▶️ How to Run
-1. Make sure you have Python installed
-2. Install the required libraries
+1. Make sure you have Python installed.
+2. Install the required libraries.
 
 ``` bash
 
