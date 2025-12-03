@@ -25,11 +25,11 @@ Helps in:
 
 # ⭐ Features
 
-- 🗃️ Structured Database Design — Products, suppliers, sales, and a link table for clear relationships.
+- Structured Database Design — Products, suppliers, sales, and a link table for relationships.
 
-- 🔗 Realistic Relationships — Proper primary keys, foreign keys, and many-to-many mapping.
+- Realistic Relationships — Proper primary keys, foreign keys, and many-to-many mapping.
 
-- 📦 Inventory & Sales Tracking — Track products, suppliers, stock, and daily sales.
+- Inventory & Sales Tracking — Track products, suppliers, stock, and daily sales.
 
 # 🛠️ Tech Stack
 
@@ -104,7 +104,7 @@ Grouping and filtering aggregated data using:
 
 Queries involving foreign keys and related table lookups.
 
-🔹 7. Advanced Queries
+7. Advanced Queries
 
 Includes:
 
