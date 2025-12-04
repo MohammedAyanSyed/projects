@@ -4,21 +4,21 @@ A PostgreSQL project for analyzing startups, investors, and funding rounds with 
 
 # 📝 Project Description
 This project contains three core tables :
-- startups - stores startup information like name,id,city,founded year
-- investors - stores investors information like name , headquarter country
-- funding - stores funding information like amount , equity
+- startups - stores startup information like name,id,city,founded year.
+- investors - stores investors information like name , headquarter country.
+- funding - stores funding information like amount , equity.
 
 # ⭐ Features
-- Structured Database Design - startups , investors , funding
-- Realistic Relationships - proper primary key
+- Structured Database Design - startups , investors , funding.
+- Realistic Relationships - proper primary key.
 
 # 🛠️ Tech Stack
 
-- PostgreSQL — Database engine for storing and managing all tables
+- PostgreSQL — Database engine for storing and managing all tables.
 
-- SQL — For writing queries, joins, constraints, and analytics
+- SQL — For writing queries, joins, constraints, and analytics.
 
-- pgAdmin 4 — GUI tool used for managing and visualizing the database
+- pgAdmin 4 — GUI tool used for managing and visualizing the database.
 
 #  📂 Database Schema
 
@@ -67,15 +67,15 @@ Using Window Functions such as sum(),dense_rank(),lag()
 
 # 🚀 How to Run
 
-- Install PostgreSQL & pgAdmin4
+- Install PostgreSQL & pgAdmin4.
 
-- Create a new database (startup_funding)
+- Create a new database (startup_funding).
 
-- Open queries.sql in pgAdmin
+- Open queries.sql in pgAdmin.
 
-- Run the script to create tables and insert sample data
+- Run the script to create tables and insert sample data.
 
-- Execute any query section (Basic, Joins, CTE, etc.)
+- Execute any query section (Basic, Joins, CTE, etc.).
 
 📁 Folder Structure
 
@@ -92,7 +92,7 @@ Startup_Funding/
 │── README.md
 
 # 📊 Sample Output
-Example : Countries with more than 5 startups
+Example : Countries with more than 5 startups.
 
 country | tot_startups
 --------+-------------
