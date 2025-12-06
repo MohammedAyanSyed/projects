@@ -19,6 +19,6 @@ This directory contains beginner-friendly SQL projects built using:
 
 ✨ SQL queries that explore startup funding data using filters, joins, group by operations, and sorting.
 
-- **Upcoming Project**
+- **Hospital Management System**
 
-✨ Details coming soon
+✨ SQL queries that observe hospital patients,doctors,appointments and bills using aggregations, subquries ,different window funtions etc
