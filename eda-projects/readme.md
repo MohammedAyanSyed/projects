@@ -22,6 +22,6 @@ This directory contains simple data analysis projects built using:
 
 ✨ Explore orders data,analyzes votes,ratings,city and cuisine and visualizes key observations using graphs and charts
 
-- **Upcoming Project**
+- **Social Media Analysis**
 
-✨ Details coming soon...
+✨ Explore social media platform data, analyzes likes, shares, comments and user followers and  visualize key metrics using graphs and charts.
