@@ -1,4 +1,4 @@
-# IMDB EDA Analysis
+# 🎬 IMDB EDA Analysis
 
 A detailed exploratory data analysis (EDA) project on IMDB Movies data to uncover trends, and sales patterns.
 
