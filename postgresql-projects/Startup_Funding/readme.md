@@ -26,6 +26,7 @@ This project contains three core tables :
 - investors - Stores investors information
 - funding - Stores funding information
 
+
 # 📜 SQL Queries Included 
 
 The project includes a queries.sql file organized into the following sections:

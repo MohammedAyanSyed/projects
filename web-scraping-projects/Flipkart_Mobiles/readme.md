@@ -32,7 +32,7 @@ pip install requests beautifulsoup4 pandas
 * Below is a sample preview of the output
 
 ```csv
-obile,Price (₹),MRP,Discount (%),Rating,Storage,Display,Camera,Battery (MAH),Processor
+Mobile,Price (₹),MRP,Discount (%),Rating,Storage,Display,Camera,Battery (MAH),Processor
 "Samsung Galaxy F36 5G (Red, 128 GB)","15,999","22,999",30,4.3,6 GB RAM & 128 GB ROM & Expandable Upto 2 TB,17.02 cm (6.7 inch) Full HD+ Display,50MP + 8MP + 2MP | 13MP Front Camera,5000,Samsung Exynos 1380 Processor
 "Samsung Galaxy F36 5G (Black, 256 GB)","19,499","27,499",29,4.2,8 GB RAM & 256 GB ROM & Expandable Upto 2 TB,17.02 cm (6.7 inch) Full HD+ Display,50MP + 8MP + 2MP | 13MP Front Camera,5000,Samsung Exynos 1380 Processor
 "IQOO Z10X 5G (Titanium, 128 GB)","14,399","17,499",17,4.4,6 GB RAM & 128 GB ROM,17.02 cm (6.7 inch) Display,50MP Rear Camera,6500,
