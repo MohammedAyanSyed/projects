@@ -70,4 +70,12 @@ Each project follows a structured workflow including data preprocessing, explora
 
 
 ## 🗃️ Cluster Project
-- Coming Soon
+- **🔌API Usage**
+  - Objective: Grouping Usage of Different APIs
+  - Model Used: DBSCAN and K-Means
+  - Result:
+    - Silhouette Score: 0.1128
+  - Highlights:
+    - Applied clustering to identify underlying data patterns 
+    - Used Elbow Method to determine optimal number of clusters 
+    - Observed low cluster separation, indicating overlapping groups   
