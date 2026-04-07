@@ -66,6 +66,6 @@ raw_1 = pd.DataFrame(
         'source':Source
     }
 )
-print(raw_1['experience'])
+
 # CSV FILE
 raw_1.to_csv('job_raw.csv',index=False)
