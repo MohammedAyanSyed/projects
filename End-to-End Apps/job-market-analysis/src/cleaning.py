@@ -35,7 +35,6 @@ jobs_list = ['data','artificial intelligence','machine learning','ai','ml','data
 skill = ['data','machine learning','dl','llm','nlp','sql','deep learning']
 file = file[file['job_title'].str.contains('|'.join(jobs_list))
             | file['skills'].str.contains('|'.join(skill))]
-print(len(file))
 
 # Saving CSV File
 file.to_csv('jobs_cleaned.csv',index=False)
