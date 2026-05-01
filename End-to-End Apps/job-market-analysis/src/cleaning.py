@@ -7,12 +7,9 @@ file = pd.read_csv('C:\\Users\\Mohammed Ayan Syed\\Downloads\\Raw_1.csv')
 
 # Null Check
 null = file.isnull().sum()
-# print(null)
 
 # Handling Null Values
 file.fillna({'skills':'Not Specified'},inplace=True)
-null2 = file.isnull().sum()
-# print(null2)
 
 # Removing unnecessary texts
 file['salary'] = file['salary'].replace(to_replace=['₹',','],value='',regex=True)
