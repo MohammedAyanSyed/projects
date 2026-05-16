@@ -2,7 +2,7 @@
 
 An End to End Data Analysis Dashboard on Data Related Jobs to uncover trends, and job market patterns.
 
-## ✅ About
+## ✅ Overview
 An interactive Streamlit dashboard analyzing job market trends, skills demand, salary distribution, and hiring insights using Plotly visualizations and PostgreSQL integration.
 
 ## 💾 Data Collection
