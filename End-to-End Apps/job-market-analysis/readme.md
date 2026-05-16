@@ -56,6 +56,16 @@ An interactive Streamlit dashboard analyzing job market trends, skills demand, s
 - The submitted data is validated and then stored directly into a SQL database using SQLAlchemy.
 - This enables continuous collection of real-time user feedback for future analysis and improvement of the dashboard.
 
+## 🖥️ Dashboard Preview
+- Main dashboard landing page
+![landing page.png](images/landing%20page.png)
+- Key Charts (EDA visuals)
+![key visuals.png](images/key%20visuals.png)
+- Feedback form
+![Feedback.png](images/Feedback.png)
+- KPI Cards
+![Screenshot 2026-05-16 140827.png](images/KPI%20Cards.png)
+
 ## 🚀 Deployment
 - Application deployed using Streamlit Cloud
 - Ensured public access to dashboard.
