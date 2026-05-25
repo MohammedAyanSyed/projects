@@ -21,7 +21,7 @@ df.columns = (df.columns.str.lower().str.replace('[^a-z0-9]','_',regex=True).str
 
 # Values Standardization
 col = df.select_dtypes(include=['object','category']).columns.to_list()
-for i in df.columns:
+for i in col:
     df[i] = df[i].astype(str).str.title().str.strip()
 
 # Saving CSV File
