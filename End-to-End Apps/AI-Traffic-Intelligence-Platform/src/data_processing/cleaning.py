@@ -10,7 +10,6 @@ nul_val = df.isnull().sum()
 
 # Duplicate Rows
 dup_rows = df.duplicated().sum()
-print('Total Duplicate Rows',dup_rows)
 df.drop_duplicates(inplace=True)
 
 # Datatype Handling
@@ -21,6 +20,7 @@ df.columns = (df.columns.str.lower().str.replace('[^a-z0-9]','_',regex=True).str
               .str.strip('_'))
 
 # Values Standardization
+col = df.select_dtypes(include=['object','category']).columns.to_list()
 for i in df.columns:
     df[i] = df[i].astype(str).str.title().str.strip()
 
