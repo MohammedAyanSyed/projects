@@ -25,4 +25,4 @@ for i in col:
     df[i] = df[i].astype(str).str.title().str.strip()
 
 # Saving CSV File
-df.to_csv('cleaned_dataset.csv')
+df.to_csv('cleaned_dataset.csv',index=False)
