@@ -23,10 +23,7 @@ weekend = (df['time'].dt.weekday >= 5).astype(int)
 df.insert(7,'weekend',weekend)
 
 # Rush Hours
-hourly_mean = df.groupby(df['time'].dt.hour)['congestion_level'].mean()
-hourly_row = df['time'].dt.hour.map(hourly_mean)
-hour_avg = df['congestion_level'].mean()
-flag = (hourly_row > hour_avg).astype(int)
+flag = ((df['time'].dt.hour>=7) & (df['time'].dt.hour<=19)).astype(int)
 df.insert(8,'rush_hours',flag)
 
 # Time Period
