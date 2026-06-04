@@ -33,11 +33,11 @@ sl,sv = zip(*sorty)
 # SelectKBest Feature Selection
 selector = SelectKBest(score_func=f_regression,k=7)
 best_train = selector.fit_transform(Xtrain,ytrain)
-all_scores = np.sort(selector.scores_)
+all_scores = selector.scores_
 top_scores = np.argsort(all_scores)[::-1][:7]
 selected_features = Xtrain.columns[top_scores]
 scores = all_scores[top_scores]
-sorty2 = sorted(zip(selected_features,scores),key=lambda x : x[1],reverse=True)
+sorty2 = sorted(zip(selected_features,scores),key=lambda x:x[1],reverse=True)
 sl2,sv2 = zip(*sorty2)
 
 # plotting important features
