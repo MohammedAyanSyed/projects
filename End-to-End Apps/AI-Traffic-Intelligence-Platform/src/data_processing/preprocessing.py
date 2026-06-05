@@ -13,8 +13,8 @@ independent = df.drop(['congestion_level','region_label','time'],axis=1)
 dependent = df['congestion_level']
 
 # Splitting CSV Selected Features :
-independent_2 = df.drop('congestion_level',axis=1)
-dependent_2 = df['congestion_level']
+independent_2 = df_selected.drop('congestion_level',axis=1)
+dependent_2 = df_selected['congestion_level']
 
 # Preprocessing
 def preprocessed(x,y):
