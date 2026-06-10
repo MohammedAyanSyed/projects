@@ -1,7 +1,7 @@
 # Import Libraries
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler,OrdinalEncoder
 
 # CSV File
 df = pd.read_csv('https://raw.githubusercontent.com/MohammedAyanSyed/projects/refs/heads/main/End-to-End%20Apps/'
@@ -21,12 +21,10 @@ def preprocessed(x,y):
     Xtrain,Xtest,ytrain,ytest = train_test_split(x,y,train_size=0.9,random_state=33)
     num_cols = Xtrain.select_dtypes(include=['int','float']).columns.to_list()
     cat_cols = Xtrain.select_dtypes(include=['object','category']).columns.to_list()
-
+    OE = OrdinalEncoder()
     # Encoding
-    for col in cat_cols:
-        freq = Xtrain[col].value_counts(normalize=True)
-        Xtrain[col] = Xtrain[col].map(freq)
-        Xtest[col] = Xtest[col].map(freq)
+    Xtrain[cat_cols] = OE.fit_transform(Xtrain[cat_cols])
+    Xtest[cat_cols] = OE.transform(Xtest[cat_cols])
 
     # Scaling
     SS = StandardScaler()
