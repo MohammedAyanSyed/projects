@@ -6,6 +6,7 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.feature_selection import SelectKBest,f_regression
 from sklearn.ensemble import RandomForestRegressor
+import joblib
 
 # Importing CSV
 df = pd.read_csv('https://raw.githubusercontent.com/MohammedAyanSyed/projects/refs/heads/main/End-to-End%20Apps/'
@@ -64,3 +65,6 @@ selected_df = df[selected]
 
 # Saving CSV File
 selected_df.to_csv('traffic_selected.csv',index=False)
+
+# Saving Selected_features
+joblib.dump(selected, '../../artifacts/selected.pkl')
