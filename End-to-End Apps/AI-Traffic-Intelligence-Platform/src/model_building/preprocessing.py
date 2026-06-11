@@ -32,11 +32,14 @@ def preprocessed(x,y):
     Xtrain[num_cols] = SS.fit_transform(Xtrain[num_cols])
     Xtest[num_cols] = SS.transform(Xtest[num_cols])
 
-    return Xtrain,Xtest,ytrain,ytest,OE
+    return Xtrain,Xtest,ytrain,ytest,OE,SS
 
 # Preprocessed Splits
-Xtrain_fe,Xtest_fe,ytrain_fe,ytest_fe,encoder = preprocessed(independent,dependent)
-Xtrain_select,Xtest_select,ytrain_select,ytest_select,or_encoder = preprocessed(independent_2,dependent_2)
+Xtrain_fe,Xtest_fe,ytrain_fe,ytest_fe,encoder,scale = preprocessed(independent,dependent)
+Xtrain_select,Xtest_select,ytrain_select,ytest_select,or_encoder,scaler = preprocessed(independent_2,dependent_2)
 
 # Saving Encoder
-joblib.dump(or_encoder,'Encoder.pkl')
+joblib.dump(or_encoder,'../../Encoder.pkl')
+
+# Saving Scaling Model
+joblib.dump(scaler, '../../artifacts/scaler.pkl')
