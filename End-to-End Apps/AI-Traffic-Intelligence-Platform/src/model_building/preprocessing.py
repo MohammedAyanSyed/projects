@@ -1,4 +1,5 @@
 # Import Libraries
+import joblib
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler,OrdinalEncoder
@@ -31,8 +32,11 @@ def preprocessed(x,y):
     Xtrain[num_cols] = SS.fit_transform(Xtrain[num_cols])
     Xtest[num_cols] = SS.transform(Xtest[num_cols])
 
-    return Xtrain,Xtest,ytrain,ytest
+    return Xtrain,Xtest,ytrain,ytest,OE
 
 # Preprocessed Splits
-Xtrain_fe,Xtest_fe,ytrain_fe,ytest_fe = preprocessed(independent,dependent)
-Xtrain_select,Xtest_select,ytrain_select,ytest_select = preprocessed(independent_2,dependent_2)
+Xtrain_fe,Xtest_fe,ytrain_fe,ytest_fe,encoder = preprocessed(independent,dependent)
+Xtrain_select,Xtest_select,ytrain_select,ytest_select,or_encoder = preprocessed(independent_2,dependent_2)
+
+# Saving Encoder
+joblib.dump(or_encoder,'Encoder.pkl')
