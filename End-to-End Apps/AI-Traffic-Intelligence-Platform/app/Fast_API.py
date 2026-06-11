@@ -5,21 +5,21 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel,Field
 from typing import Annotated,Literal
 import joblib
+from pathlib import Path
+
+base = Path(__file__).resolve().parent.parent
 
 # App instance
 app= FastAPI()
 
 # Loading Model
-with open('../artifacts/model.pkl', 'rb') as f:
-    model = joblib.load(f)
+model = joblib.load(base / "artifacts" / "model.pkl")
 
 # Loading Encoder
-with open('../artifacts/Encoder.pkl','rb') as f:
-    encoder = joblib.load(f)
+encoder = joblib.load(base / "artifacts" / "Encoder.pkl")
 
 # Loading Scaler
-with open('../artifacts/scaler.pkl','rb') as f:
-    scaler = joblib.load(f)
+scaler = joblib.load(base / "artifacts" / "scaler.pkl")
 
 # Pydantic Object
 class Traffic(BaseModel):
