@@ -40,8 +40,8 @@ def congestion_predict(a,b,c,d,e,f,g,h):
         return f'Error = {e}'
 
 def congestion():
-    metric_df = pd.read_csv("C:\\Users\\Mohammed Ayan Syed\\projects\\End-to-End Apps\\AI-Traffic-Intelligence-Platform\\"
-                     "data\\processed\\traffic_fe.csv")
+    metric_df = pd.read_csv("https://raw.githubusercontent.com/MohammedAyanSyed/projects/refs/heads/main/End-to-End%20Apps/"
+                            "AI-Traffic-Intelligence-Platform/data/processed/traffic_fe.csv")
     st.sidebar.metric(label='Total Records',value=len(metric_df),border=True)
     st.sidebar.metric(label='Total Cities',value=len(metric_df['city'].unique()),border=True)
     st.sidebar.metric(label='Total Features', value=len(metric_df.columns), border=True)
