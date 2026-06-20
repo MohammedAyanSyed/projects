@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import graphviz
+from pathlib import Path
 
 df = pd.read_csv('https://raw.githubusercontent.com/MohammedAyanSyed/projects/refs/heads/main/End-to-End%20Apps/AI-Traffic-Intelligence-Platform/data/processed/cleaned_dataset.csv',
                  parse_dates=['time'])
@@ -44,7 +45,9 @@ def about_project():
     st.divider()
     col1,col2 = st.columns([3,7])
     with col1:
-        st.image('images/traffic.png',width=300)
+        base1 = Path(__file__).resolve().parent.parent
+        traffic = base1 / 'images' / 'traffic.png'
+        st.image(str(traffic),width=300)
     with col2:
         st.subheader(':blue[**Project Overview**]')
         st.write('The AI Traffic Intelligence Platform is an end-to-end solution designed to analyze traffic patterns and'
@@ -104,19 +107,25 @@ def about_project():
     col6.subheader(":yellow[Project Links]")
     col1,col2 = col6.columns([2,8])
     with col1:
-        st.image('images/github.png',width=80)
+        base2 = Path(__file__).resolve().parent.parent
+        github = base2 / 'images' / 'github.png'
+        st.image(str(github),width=80)
     with col2:
         st.write('\n')
         st.link_button('**Github repository**',url='https://github.com/MohammedAyanSyed/projects/tree/main/End-to-End%20Apps/AI-Traffic-Intelligence-Platform')
     col3, col4 = col6.columns([2,8])
     with col3:
-        st.image('images/docker.png', width=80)
+        base3 = Path(__file__).resolve().parent.parent
+        docker = base3 / 'images' / 'docker.png'
+        st.image(str(docker), width=80)
     with col4:
         st.write('\n')
         st.link_button('**Docker Image**',url='https://hub.docker.com/repository/docker/ayansyed19/traffic-api/general')
     col7,col8 = col6.columns([2,8])
     with col7:
-        st.image('images/fast.png',width=80)
+        base4 = Path(__file__).resolve().parent.parent
+        fast = base4 / 'images' / 'fast.png'
+        st.image(str(fast),width=80)
     with col8:
         st.write('\n')
         st.link_button('**Render FastAPI**',url='https://traffic-api-latest-3gyz.onrender.com/')
