@@ -10,8 +10,11 @@
 
 A machine learning project that predicts traffic congestion levels using passed traffic data. This project has complete data science and deployment lifecycle, from data collection and preprocessing to API deployment and interactive web application development.
 
-## 📌 Overview
+## ℹ️ Overview
 The goal of this project is to predict traffic congestion levels based on various traffic, cities, and timeline factors. The project was developed using publicly available online datasets and follows an end-to-end machine learning workflow.
+
+## 📌 Note
+**The trained model (model.pkl) is not included in this repository because it exceeds GitHub's 100 MB file size limit.**
 
 ## 🔄 Project Workflow
 
