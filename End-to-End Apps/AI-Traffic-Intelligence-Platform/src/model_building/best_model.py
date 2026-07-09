@@ -30,4 +30,4 @@ study.optimize(tuning,n_trials=5)
 model = RandomForestRegressor(**study.best_params,random_state=33).fit(Xtrain,ytrain)
 
 # Saving Model
-joblib.dump(model, '../data_processing/model.pkl')
+joblib.dump(model, '../../artifacts/model.pkl')

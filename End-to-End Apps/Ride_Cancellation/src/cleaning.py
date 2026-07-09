@@ -3,8 +3,8 @@ import numpy as np
 import pandas as pd
 
 # Importing Dataset
-df = pd.read_csv('C:\\Users\\Mohammed Ayan Syed\\projects\\End-to-End Apps\\'
-                 'Ride_Cancellation\\data\\ride_bookings.csv',parse_dates=['Date','Time'])
+df = pd.read_csv('https://raw.githubusercontent.com/MohammedAyanSyed/projects/refs/heads'
+                 '/main/End-to-End%20Apps/Ride_Cancellation/data/ride_bookings.csv')
 
 # Null Check
 null_check = df.isnull().sum()
@@ -15,8 +15,7 @@ df.fillna({'Cancelled Rides by Customer':0,
            'Cancelled Rides by Driver':0,
            'Driver Cancellation Reason':'No Driver Cancellation',
            'Incomplete Rides':0,'Incomplete Rides Reason':'Ride is Completed or Cancelled',
-           'Payment Method':'No Payment','Driver Ratings':'No Rating Given',
-           'Customer Rating':'No Rating Given'},inplace=True)
+           'Payment Method':'No Payment'},inplace=True)
 
 # Duplicate Rows
 duplicate = df.duplicated().sum()
