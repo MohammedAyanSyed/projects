@@ -3,7 +3,7 @@ import pandas as pd
 
 # Importing Dataset
 df = pd.read_csv('https://raw.githubusercontent.com/MohammedAyanSyed/projects/refs/heads/main/End-to-End%20Apps/'
-                 'Ride_Cancellation/data/df_cleaned.csv')
+                 'Ride_Cancellation/data/ride_cleaned.csv')
 
 df['date'] = pd.to_datetime(df['date'],format='mixed')
 df['time'] = pd.to_datetime(df['time'],format='%H:%M:%S')

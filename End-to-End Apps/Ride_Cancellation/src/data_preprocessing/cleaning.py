@@ -29,4 +29,4 @@ for i in o_cols:
     df[i] = df[i].astype(str).str.title().str.replace(' ','_').str.strip('"')
 
 # Saving CSV File
-df.to_csv('df_cleaned.csv',index=False)
+df.to_csv('ride_cleaned.csv',index=False)
