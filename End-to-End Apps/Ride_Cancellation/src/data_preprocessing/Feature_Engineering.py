@@ -5,8 +5,8 @@ import pandas as pd
 df = pd.read_csv('https://raw.githubusercontent.com/MohammedAyanSyed/projects/refs/heads/main/End-to-End%20Apps/'
                  'Ride_Cancellation/data/ride_cleaned.csv')
 
-df['date'] = pd.to_datetime(df['date'],format='mixed')
-df['time'] = pd.to_datetime(df['time'],format='%H:%M:%S')
+df['date'] = pd.to_datetime(df['date'],format='mixed',errors='coerce')
+df['time'] = pd.to_datetime(df['time'],format='%H:%M:%S',errors='coerce')
 
 # Hour
 hour = df['time'].dt.hour
@@ -29,9 +29,9 @@ weekend = (df['date'].dt.weekday >=5).astype(int)
 df.insert(4,'weekend',weekend)
 
 # Time Period
-b = pd.to_datetime([5,12,15,20,24])
-l = ['morning','afternoon','evening','night']
-time_period = pd.cut(df['time'],labels=l,bins=b)
+b = [0,6,12,15,20,24]
+l = ['late night','morning','afternoon','evening','night']
+time_period = pd.cut(df['time'].dt.hour,labels=l,bins=b,right=False)
 df.insert(7,'time_period',time_period)
 
 # Rush Hour
