@@ -54,7 +54,8 @@ df.insert(27,'long_ride',long_ride)
 # Dropping Columns
 df.drop(['booking_id','customer_id','avg_ctat','avg_vtat','cancelled_rides_by_customer',
          'reason_for_cancelling_by_customer','cancelled_rides_by_driver','driver_cancellation_reason',
-         'incomplete_rides','incomplete_rides_reason','driver_ratings','customer_rating'],axis=1,inplace=True)
+         'incomplete_rides','incomplete_rides_reason','driver_ratings','customer_rating',
+         'date','time'],axis=1,inplace=True)
 
 # Dropping Duplicate Rows
 df.drop_duplicates(inplace=True)
