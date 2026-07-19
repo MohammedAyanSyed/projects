@@ -2,6 +2,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler,LabelEncoder
+import joblib
 
 # CSV File
 df = pd.read_csv('https://raw.githubusercontent.com/MohammedAyanSyed/projects/refs/heads/main/End-to-End%20Apps/'
@@ -18,16 +19,29 @@ def preprocessing(a,b,c,d):
     n_cols = a.select_dtypes(include=['int','float']).columns.to_list()
     ss = StandardScaler()
     le = LabelEncoder()
+
+    freq_encoding = {}
     # Encoding
     for i in o_cols:
         freq = a[i].value_counts().to_dict()
         a[i] = a[i].map(freq)
         b[i] = b[i].map(freq)
+        freq_encoding[i] = freq
     c = le.fit_transform(c)
     d = le.transform(d)
     # Scaling
     a[n_cols] = ss.fit_transform(a[n_cols])
     b[n_cols] = ss.transform(b[n_cols])
-    return a,b,c,d
 
-Xtrain,Xtest,ytrain,ytest = preprocessing(w,x,y,z)
+    return a,b,c,d,freq_encoding,le,ss
+
+Xtrain,Xtest,ytrain,ytest,fe,le,ss = preprocessing(w,x,y,z)
+
+# Saving Encoding Model
+joblib.dump(fe,'frequency_encoding.pkl')
+
+# Label Encoder Model
+joblib.dump(le,'l_encoder.pkl')
+
+# Scaling Model
+joblib.dump(ss,'scaling.pkl')
