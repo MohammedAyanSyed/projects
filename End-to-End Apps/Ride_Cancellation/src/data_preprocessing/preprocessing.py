@@ -45,3 +45,6 @@ joblib.dump(le,'l_encoder.pkl')
 
 # Scaling Model
 joblib.dump(ss,'scaling.pkl')
+
+# Saving Columns order
+joblib.dump(Xtrain.columns.to_list(),'training_columns.pkl')
