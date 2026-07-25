@@ -16,7 +16,7 @@ def objective_random_forest(trial):
     msl = trial.suggest_int('min_samples_leaf',6,12)
     model = RandomForestClassifier(n_estimators=ne,max_depth=md,min_samples_split=mss,min_samples_leaf=msl,
                                    random_state=12)
-    score = cross_val_score(model,Xtrain,ytrain,cv=5,scoring='roc_auc_ovr').mean()
+    score = cross_val_score(model,Xtrain,ytrain,cv=5,scoring='f1_macro').mean()
     return score
 
 study = optuna.create_study(direction='maximize',sampler=optuna.samplers.TPESampler())
@@ -32,7 +32,7 @@ def objective_xgboost(trial):
     rl = trial.suggest_float('reg_lambda',1.0,4.0)
     model = XGBClassifier(n_estimators=ne,max_depth=md,subsample=ss,colsample_bytree=cst,
                           learning_rate=lr,reg_lambda=rl,random_state=12)
-    score = cross_val_score(model,Xtrain,ytrain,cv=5,scoring='roc_auc_ovr').mean()
+    score = cross_val_score(model,Xtrain,ytrain,cv=5,scoring='f1_macro').mean()
     return score
 
 study2 = optuna.create_study(direction='maximize',sampler=optuna.samplers.TPESampler())
@@ -51,7 +51,7 @@ def objective_lightbgm(trial):
 
     model = LGBMClassifier(n_estimators=ne,max_depth=md,subsample=ss,colsample_bytree=cst,min_child_samples=mcs,
                            learning_rate=lr,reg_lambda=rl,num_leaves=nl,random_state=12)
-    score = cross_val_score(model,Xtrain,ytrain,cv=5,scoring='roc_auc_ovr').mean()
+    score = cross_val_score(model,Xtrain,ytrain,cv=5,scoring='f1_macro').mean()
     return score
 
 study3 = optuna.create_study(direction='maximize',sampler=optuna.samplers.TPESampler())
